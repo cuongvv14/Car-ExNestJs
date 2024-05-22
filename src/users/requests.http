@@ -3,12 +3,27 @@ POST  http://localhost:3000/auth/signup
 content-type:application/json
 
 {
-  "email": "test21@example.com",
-  "password": "testpassword"
+  "email": "test1@test.com",
+  "password": "12345"
+}
+###Sign in as an existing user
+POST  http://localhost:3000/auth/signin
+content-type:application/json
+
+{
+  "email": "test1@test.com",
+  "password": "12345"
 }
 
+###Get the currently signed in user
+GET  http://localhost:3000/auth/whoami
+
+
+###Sign Out 
+POST   http://localhost:3000/auth/signout
+
 ### Find a particular user with a given Id
-GET  http://localhost:3000/auth/35
+GET  http://localhost:3000/auth/41
 
 ### Find all user with a given email
 
@@ -24,3 +39,9 @@ content-type:application/json
 {
   "email": "cuongmc111qwe404@gmail.com"
 }
+
+###Set a color 
+GET  http://localhost:3000/auth/colors/rebluesadasd
+
+###Get a color 
+GET  http://localhost:3000/auth/colors
